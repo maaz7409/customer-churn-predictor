@@ -1,6 +1,6 @@
 ## E-commerce Customer Churn Prediction
 
-### Need for ML
+<!-- ### Need for ML -->
 
 ### Method
 
