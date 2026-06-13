@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: churn_backend
+    ports:
+      - "8000:8000"
+    env_file :
+      - ./backend/.env
+    restart: unless-stopped
+    # image: maaz7409/churn_predictor_backend:v1.0
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args :
+        - VITE_BACKEND_URL=${VITE_BACKEND_URL}
+    container_name: churn_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    # image: maaz7409/churn_predictor_frontend:v1.0
+    
+
+
