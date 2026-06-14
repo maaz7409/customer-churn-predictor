@@ -23,7 +23,7 @@ export default function ColdStartModal({ isVisible }) {
 
        
         <p className="text-sm leading-relaxed text-slate-400">
-          Since this project uses a free hosting service Render.io, the backend goes to sleep after 15 minutes of inactivity. 
+          Since this project uses a free hosting service Render.com, the backend goes to sleep after 15 minutes of inactivity. 
           <br className="mb-2" />
           It usually takes about 30 to 50 seconds to spin back up. Please Wait ...
         </p>
