@@ -76,7 +76,7 @@ docker pull maaz7409/churn_backend
 then run 
 
 ```
-docker run -e ALLOWED_ORIGIN="your frontend url here" maaz7409/churn_backend
+docker run -e FRONTEND_URL="your frontend url here" maaz7409/churn_backend
 ```
 
 #### If you wanna run this locally and experiment with it
@@ -94,12 +94,13 @@ git clone https://github.com/maaz7409/customer-churn-predictor.git
 
 ```
 # In ./frontend/.env
+# Technically API url not Backend URL .....
 VITE_BACKEND_URL='http://127.0.0.1:8000'
 ```
 
 ```
 # In ./backend/.env
-ALLOWED_ORIGIN='http://localhost:5173'
+FRONTEND_URL='http://localhost:5173'
 ```
 
 then, run 
